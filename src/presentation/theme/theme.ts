@@ -13,4 +13,20 @@ export const globalColors = {
 
 export const globalStyle = StyleSheet.create({
 
+    container: {
+        flex: 1,
+        padding: 20,
+        backgroundColor: globalColors.background,
+    },
+    primaryButton: {
+        backgroundColor: globalColors.primary,
+        borderRadius: 5,
+        padding: 10,
+        width: '100%',
+        alignItems: 'center',
+    },
+    buttonText:{
+        color: globalColors.background,
+        fontSize: 18,
+    }
 });
