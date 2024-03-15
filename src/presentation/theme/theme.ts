@@ -12,18 +12,18 @@ export const globalColors = {
 };
 
 export const globalStyle = StyleSheet.create({
-
     container: {
         flex: 1,
         padding: 20,
         backgroundColor: globalColors.background,
     },
     primaryButton: {
-        backgroundColor: globalColors.primary,
+        backgroundColor: globalColors.tertiary,
         borderRadius: 5,
         padding: 10,
         width: '100%',
         alignItems: 'center',
+        marginBottom: 10
     },
     buttonText:{
         color: globalColors.background,

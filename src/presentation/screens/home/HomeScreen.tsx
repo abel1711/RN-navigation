@@ -1,11 +1,12 @@
 import { View } from 'react-native';
 import { globalStyle } from '../../theme/theme';
-import { useNavigation } from '@react-navigation/native';
+import { type NavigationProp, useNavigation } from '@react-navigation/native';
 import { PrimaryButton } from '../../components/shared/PrimaryButton';
+import { type RootStackParams } from '../../routes/StackNavigation';
 
 export const HomeScreen = () => {
 
-    const navigation = useNavigation();
+    const navigation = useNavigation<NavigationProp<RootStackParams>>();
 
     return (
         <View
@@ -13,12 +14,12 @@ export const HomeScreen = () => {
         >
             <PrimaryButton
                 label='Productos'
-                onPress={() => navigation.navigate('Products' as never)}
+                onPress={() => navigation.navigate('Products')}
             />  
             
             <PrimaryButton
                 label='Settings'
-                onPress={() => navigation.navigate('Settings' as never)}
+                onPress={() => navigation.navigate('Settings')}
             />
         </View>
     )
