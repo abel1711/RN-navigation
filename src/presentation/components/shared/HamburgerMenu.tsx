@@ -1,6 +1,7 @@
 import { DrawerActions, useNavigation } from "@react-navigation/native";
 import { useEffect } from "react";
-import { Pressable, Text } from "react-native";
+import { Pressable } from "react-native";
+import { Ionicons } from "./Ionicons";
 
 export const HamburgerMenu = () => {
     const navigation = useNavigation();
@@ -8,8 +9,14 @@ export const HamburgerMenu = () => {
     useEffect(() => {
      navigation.setOptions({
         headerLeft: ()=>(
-            <Pressable onPress={()=>navigation.dispatch(DrawerActions.toggleDrawer())}>
-                <Text>Menu</Text>
+            <Pressable 
+            style={{
+                marginHorizontal: 10
+            }}
+            onPress={()=>navigation.dispatch(DrawerActions.toggleDrawer())}>
+                <Ionicons 
+                    name="menu-outline"
+                />
             </Pressable>
         )
      })

@@ -2,6 +2,7 @@ import { Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { PrimaryButton } from '../../components/shared/PrimaryButton';
 import { DrawerActions, useNavigation } from '@react-navigation/native';
+import { HamburgerMenu } from '../../components/shared/HamburgerMenu';
 
 export const ProfileScreen = () => {
 
@@ -16,6 +17,7 @@ export const ProfileScreen = () => {
                 flex: 1,
             }}
         >
+            <HamburgerMenu />
             <Text style={{
                 marginBottom: 10
             }}>ProfileScreen</Text>
