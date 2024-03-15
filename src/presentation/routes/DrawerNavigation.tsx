@@ -1,8 +1,8 @@
 import { DrawerContentComponentProps, DrawerContentScrollView, DrawerItemList, createDrawerNavigator } from '@react-navigation/drawer';
-import { ProfileScreen } from '../screens/profile/ProfileScreen';
-import { StackNavigation } from './StackNavigation';
-import { globalColors } from '../theme/theme';
 import { View } from 'react-native';
+import { ProfileScreen } from '../screens/profile/ProfileScreen';
+import { globalColors } from '../theme/theme';
+import { BottomTabNavigator } from './BottomTabNavigator';
 
 const Drawer = createDrawerNavigator();
 
@@ -19,7 +19,6 @@ export const DrawerNavigation = () => {
                 drawerActiveBackgroundColor: globalColors.tertiary,
                 drawerActiveTintColor: 'white',
                 drawerInactiveTintColor: globalColors.tertiary,
-                drawerPosition: 'right',
                 drawerItemStyle:{
                     borderRadius: 50,   
                     paddingHorizontal: 20
@@ -27,7 +26,7 @@ export const DrawerNavigation = () => {
                 }
             }}
         >
-            <Drawer.Screen name="StackNavigation" component={StackNavigation} />
+            <Drawer.Screen name="Tabs" component={BottomTabNavigator} />
             <Drawer.Screen name="Profile" component={ProfileScreen} />
         </Drawer.Navigator>
     )
